@@ -24,7 +24,7 @@ describe('GET /discover/movies successful response',function() {
             cy.request('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=606aaffd7ca10f0b80804a1f0674e4e1')
             .then((response) => {
                   expect(response.body.page).to.eq(1)
-                  expect(response.body.total_pages).to.eq(18439)
+                  expect(response.body.total_pages).to.eq(18440)
                   expect(response.body.total_results).to.eq(368779)
                   })
                 
