@@ -1,0 +1,23 @@
+{
+  "name": "movie-database-testing",
+  "version": "1.0.0",
+  "description": "movie databse api testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonmo35/movie-database-testing.git"
+  },
+  "author": "jon moron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonmo35/movie-database-testing/issues"
+  },
+  "devDependencies": {
+    "cypress": "^3.0.2"
+  },
+  "homepage": "https://github.com/jonmo35/movie-database-testing#readme"
+}
