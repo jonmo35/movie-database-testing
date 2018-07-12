@@ -1,4 +1,4 @@
-describe('GET /discover/movies successful response',function() {
+describe('GET /discover/movies http status code 200',function() {
     
          it('Visits Movie Database Website', function() {
                 cy.visit('https://www.themoviedb.org/')
@@ -13,20 +13,11 @@ describe('GET /discover/movies successful response',function() {
                             })
          })
          
-         it('returns JSON', function(){
+         it('Verify GET /discover/movies headers', function(){
             cy.request('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=606aaffd7ca10f0b80804a1f0674e4e1')
             .its('headers')
             .its('content-type')
             .should('include', 'application/json')
             })
          
-         it('Verify json response body with no filters', function(){
-            cy.request('GET', 'https://api.themoviedb.org/3/discover/movie?api_key=606aaffd7ca10f0b80804a1f0674e4e1')
-            .then((response) => {
-                  expect(response.body.page).to.eq(1)
-                  expect(response.body.total_pages).to.eq(18440)
-                  expect(response.body.total_results).to.eq(368779)
-                  })
-                
-            })
 })
